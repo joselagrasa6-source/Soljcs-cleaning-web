@@ -8,77 +8,227 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Poppins', sans-serif; color:#333; line-height:1.7; }
+        body { font-family:'Poppins', sans-serif; color:#333; line-height:1.7; background:#f8f9fa; }
         .container { max-width:1300px; margin:0 auto; padding:0 20px; }
 
-        header { position:fixed; top:0; width:100%; background:#fff; box-shadow:0 8px 30px rgba(0,0,0,0.1); z-index:1000; padding:20px 0; }
+        header {
+            position:fixed; top:0; width:100%; background:#fff; box-shadow:0 8px 30px rgba(0,0,0,0.1); z-index:1000; padding:20px 0;
+        }
         .header-inner { display:flex; justify-content:space-between; align-items:center; }
-        .logo h1 { font-family:'Montserrat', sans-serif; font-size:78px; font-weight:900; background:linear-gradient(90deg, #1e90ff, #00d4aa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; letter-spacing:-3px; }
-        .logo span { font-size:26px; color:#00d4aa; font-weight:600; letter-spacing:2px; }
+        .logo h1 {
+            font-family:'Montserrat', sans-serif;
+            font-size:82px;
+            font-weight:900;
+            background:linear-gradient(90deg, #1e90ff, #00d4aa);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            letter-spacing:-3px;
+        }
+        .logo span {
+            font-size:28px;
+            color:#00d4aa;
+            font-weight:600;
+            letter-spacing:2px;
+        }
+        .nav a {
+            margin-left:45px;
+            font-size:19px;
+            font-weight:600;
+            color:#333;
+            text-decoration:none;
+        }
+        .nav a:hover { color:#1e90ff; }
 
-        .hero { height:100vh; background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('foto1.jpg') center/cover no-repeat; color:white; text-align:center; display:flex; align-items:center; justify-content:center; }
-        .hero h2 { font-family:'Montserrat', sans-serif; font-size:86px; font-weight:900; margin-bottom:20px; }
-        .hero p { font-size:30px; margin-bottom:50px; }
-        .btn-whatsapp { background:#25d366; color:white; padding:22px 60px; border-radius:60px; font-size:26px; font-weight:700; text-decoration:none; box-shadow:0 15px 40px rgba(37,211,102,0.4); }
+        .hero {
+            height:100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('foto1.jpg') center/cover no-repeat;
+            color:white;
+            text-align:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .hero h2 {
+            font-family:'Montserrat', sans-serif;
+            font-size:90px;
+            font-weight:900;
+            margin-bottom:20px;
+        }
+        .hero p {
+            font-size:32px;
+            margin-bottom:50px;
+        }
+        .btn-whatsapp {
+            background:#25d366;
+            color:white;
+            padding:24px 70px;
+            border-radius:60px;
+            font-size:28px;
+            font-weight:700;
+            text-decoration:none;
+            box-shadow:0 15px 40px rgba(37,211,102,0.5);
+            transition:0.3s;
+        }
         .btn-whatsapp:hover { transform:scale(1.1); }
 
         section { padding:120px 0; }
-        h2 { font-family:'Montserrat', sans-serif; font-size:56px; text-align:center; margin-bottom:80px; color:#1e90ff; font-weight:800; }
+        h2 {
+            font-family:'Montserrat', sans-serif;
+            font-size:60px;
+            text-align:center;
+            margin-bottom:80px;
+            color:#1e90ff;
+            font-weight:800;
+        }
 
-        .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(380px,1fr)); gap:50px; }
-        .service-card { background:#fff; border-radius:30px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.1); transition:0.4s; }
+        .services-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(380px,1fr));
+            gap:60px;
+        }
+        .service-card {
+            background:#fff;
+            border-radius:30px;
+            overflow:hidden;
+            box-shadow:0 20px 50px rgba(0,0,0,0.12);
+            transition:0.4s;
+            text-align:center;
+        }
         .service-card:hover { transform:translateY(-20px); }
-        .service-card img { width:100%; height:380px; object-fit:cover; }
-        .service-card h3 { font-size:30px; padding:30px 20px 15px; color:#1e90ff; }
+        .service-card img { width:100%; height:400px; object-fit:cover; }
+        .service-card h3 { font-size:32px; padding:35px 20px 15px; color:#1e90ff; }
         .service-card p { padding:0 40px 40px; font-size:18px; color:#555; }
 
-        .about { background:#f8f9fa; }
+        .about { background:#f0f8ff; }
         .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-        .about-text p { font-size:20px; margin-bottom:30px; }
+        .about-text p { font-size:21px; margin-bottom:30px; }
         .about img { width:100%; border-radius:30px; box-shadow:0 25px 60px rgba(0,0,0,0.15); }
 
-        .testimonials { background:#1e90ff; color:white; }
+        .testimonials { background:#1e90ff; color:white; padding:140px 0; }
         .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px,1fr)); gap:50px; }
-        .testimonial { background:rgba(255,255,255,0.1); padding:40px; border-radius:25px; text-align:center; }
-        .stars { color:#ffd700; font-size:28px; margin-bottom:15px; }
+        .testimonial { background:rgba(255,255,255,0.1); padding:50px; border-radius:30px; text-align:center; }
+        .stars { color:#ffd700; font-size:32px; margin-bottom:20px; }
 
-        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-        .contact-info p { font-size:20px; margin:30px 0; }
-        .contact-info i { color:#1e90ff; margin-right:15px; font-size:24px; }
-        form input, form textarea { width:100%; padding:18px; margin:12px 0; border:1px solid #ddd; border-radius:15px; font-size:18px; }
-        form button { background:#1e90ff; color:white; padding:20px 50px; border:none; border-radius:15px; font-size:20px; cursor:pointer;cursor:pointer; transition:0.3s; }
-        form button:hover { background:#0d6efd; transform:scale(1.05); }
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+        .contact-info p { font-size:22px; margin:35px 0; }
+        .contact-info i { color:#1e90ff; margin-right:15px; font-size:26px; }
+        form input, form textarea, form select { width:100%; padding:20px; margin:15px 0; border:1px solid #ddd; border-radius:15px; font-size:18px; }
+        form button { background:#25d366; color:white; padding:20px 50px; border:none; border-radius:15px; font-size:22px; cursor:pointer; transition:0.3s; }
+        form button:hover { background:#128c7e; transform:scale(1.05); }
 
-        .whatsapp-float { position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:70px; height:70px; border-radius:50%; font-size:40px; box-shadow:0 10px 30px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; text-decoration:none; z-index:999; }
-        .whatsapp-float:hover { transform:scale(1.2); }
+        .whatsapp-float {
+            position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:75px; height:75px; border-radius:50%; font-size:42px; box-shadow:0 10px 30px rgba(0,0,0,0.4); display:flex; align-items:center; justify-content:center; text-decoration:none; z-index:999;
+        }
 
-        footer { background:#111; color:#aaa; text-align:center; padding:60px; font-size:18px; }
+        footer { background:#111; color:#aaa; text-align:center; padding:70px; font-size:19px; }
 
         @media (max-width:768px) {
-            .hero h2 { font-size:52px; }
-            .contact-grid { grid-template-columns:1fr; }
+            .hero h2 { font-size:56px; }
+            .about-grid, .contact-grid { grid-template-columns:1fr; }
+            .nav { display:none; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/14752323432?text=Hola! Quiero cotización" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/14752323432?text=Hola! Quiero cotización gratuita" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- HEADER, HERO, SERVICES, ABOUT, TESTIMONIALS (igual que antes) -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <h1>SOLJCS</h1>
+                <span>YOUR SPACE ALWAYS CLEAN</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <!-- CONTACTO + MAPA + FORMULARIO -->
+    <section class="hero" id="home">
+        <div>
+            <h2>Professional Cleaning Services</h2>
+            <p>Homes · Offices · Deep Cleaning · Move In/Out · Cleveland</p>
+            <a href="https://wa.me/14752323432" class="btn-whatsapp">Get Free Quote</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="foto1.jpg" alt="SOLJCS Team">
+                    <h3>Regular & Deep Cleaning</h3>
+                    <p>Weekly, bi-weekly or one-time deep cleaning for homes and offices</p>
+                </div>
+                <div class="service-card">
+                    <img src="foto2.jpg" alt="Deep Cleaning">
+                    <h3>Deep Cleaning</h3>
+                    <p>Inside cabinets, appliances, windows, baseboards – everything spotless</p>
+                </div>
+                <div class="service-card">
+                    <img src="foto3.jpg" alt="Commercial Cleaning">
+                    <h3>Commercial & Warehouse</h3>
+                    <p>Large-scale cleaning for offices, stores and industrial spaces</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About SOLJCS</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Family-owned company with <strong>8+ years of experience</strong> serving Cleveland and surrounding areas.</p>
+                    <p>Fully insured & bonded · Eco-friendly products · Same cleaner every time · 100% satisfaction guarantee</p>
+                    <p>We treat every space like our own – your satisfaction is our priority.</p>
+                </div>
+                <img src="foto1.jpg" alt="SOLJCS Team">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"The best cleaning team in Cleveland! Always on time and perfect results."</p>
+                    <strong>— Maria R., Cleveland</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"They cleaned my office after construction – looked brand new!"</p>
+                    <strong>— John M., Lakewood</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, trustworthy and very detailed. Highly recommended!"</p>
+                    <strong>— Sarah K., Westlake</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2>Get Your Free Quote</h2>
             <div class="contact-grid">
                 <div class="contact-info">
                     <p><i class="fas fa-phone"></i> +1 (475) 232-3432</p>
                     <p><i class="fas fa-map-marker-alt"></i> 13718 Liberty Ave, Cleveland, OH 44135</p>
                     <p><i class="fas fa-envelope"></i> rochajeremiasselenne@icloud.com</p>
                     <div style="margin-top:50px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.684499992552!2d-81.587462684685!3d41.447399979259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830f2c8d3f2c6d7%3A0x8f2f2b8b8b8b8b8b!2s13718%20Liberty%20Ave%2C%20Cleveland%2C%20OH%2044135!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="400" style="border:0; border-radius:25px;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.684499992552!2d-81.587462684685!3d41.447399979259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830f2c8d3f2c6d7%3A0x8f2f2b8b8b8b8b8b!2s13718%20Liberty%20Ave%2C%20Cleveland%2C%20OH%2044135!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="450" style="border:0; border-radius:25px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
                 <div>
@@ -93,8 +243,8 @@
                             <option>Office Cleaning</option>
                             <option>Move In/Out</option>
                         </select>
-                        <textarea name="message" rows="6" placeholder="Tell us about your cleaning needs..." required></textarea>
-                        <button type="submit">Send Message - We'll call you!</button>
+                        <textarea name="message" rows="6" placeholder="Tell us about your cleaning needs and preferred date..." required></textarea>
+                        <button type="submit">Send Message – We'll Call You!</button>
                     </form>
                 </div>
             </div>
@@ -103,7 +253,7 @@
 
     <footer>
         <div class="container">
-            <p style="font-size:32px;"><strong>SOLJCS Cleaning Services</strong></p>
+            <p style="font-size:34px;"><strong>SOLJCS Cleaning Services</strong></p>
             <p>Cleveland, OH · +1 (475) 232-3432</p>
             <p style="margin-top:30px;">© 2025 SOLJCS - Your Space Always Clean</p>
         </div>
