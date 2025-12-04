@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +19,7 @@
         }
         .logo h1 {
             font-family:'Montserrat', sans-serif;
-            font-size:72px;
+            font-size:78px;
             font-weight:900;
             background:linear-gradient(90deg, #1e90ff, #00d4aa);
             -webkit-background-clip:text;
@@ -28,14 +27,15 @@
             letter-spacing:-3px;
         }
         .logo span {
-            font-size:24px;
+            font-size:26px;
             color:#00d4aa;
             font-weight:600;
             letter-spacing:2px;
         }
+
         .nav a {
             margin-left:40px;
-            font-size:18px;
+            font-size:19px;
             font-weight:600;
             color:#333;
             text-decoration:none;
@@ -44,7 +44,7 @@
 
         .hero {
             height:100vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://i.imgur.com/0wL9p8Z.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('Imagen%20de%20WhatsApp%202025-12-03%20a%20las%2017.18.45.jpg') center/cover no-repeat;
             color:white;
             text-align:center;
             display:flex;
@@ -53,14 +53,13 @@
         }
         .hero h2 {
             font-family:'Montserrat', sans-serif;
-            font-size:82px;
+            font-size:86px;
             font-weight:900;
             margin-bottom:20px;
         }
         .hero p {
-            font-size:28px;
+            font-size:30px;
             margin-bottom:50px;
-            max-width:900px;
         }
         .btn-whatsapp {
             background:#25d366;
@@ -71,7 +70,6 @@
             font-weight:700;
             text-decoration:none;
             box-shadow:0 15px 40px rgba(37,211,102,0.4);
-            transition:0.3s;
         }
         .btn-whatsapp:hover { transform:scale(1.1); }
 
@@ -96,90 +94,38 @@
             overflow:hidden;
             box-shadow:0 20px 50px rgba(0,0,0,0.1);
             transition:0.4s;
-            text-align:center;
         }
         .service-card:hover { transform:translateY(-20px); }
         .service-card img { width:100%; height:380px; object-fit:cover; }
         .service-card h3 { font-size:30px; padding:30px 20px 15px; color:#1e90ff; }
         .service-card p { padding:0 40px 40px; font-size:18px; color:#555; }
 
-        .about {
-            background:#f8f9fa;
-        }
-        .about-grid {
-            display:grid;
-            grid-template-columns:1fr 1fr;
-            gap:80px;
-            align-items:center;
-        }
-        .about-text p {
-            font-size:20px;
-            margin-bottom:30px;
-        }
-        .about img {
-            width:100%;
-            border-radius:30px;
-            box-shadow:0 25px 60px rgba(0,0,0,0.15);
-        }
+        .about { background:#f8f9fa; }
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .about-text p { font-size:20px; margin-bottom:30px; }
+        .about img { width:100%; border-radius:30px; box-shadow:0 25px 60px rgba(0,0,0,0.15); }
 
-        .testimonials {
-            background:#1e90ff;
-            color:white;
-        }
-        .testimonials-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
-            gap:50px;
-        }
-        .testimonial {
-            background:rgba(255,255,255,0.1);
-            padding:40px;
-            border-radius:25px;
-            text-align:center;
-        }
-        .stars {
-            color:#ffd700;
-            font-size:28px;
-            margin-bottom:15px;
-        }
+        .testimonials { background:#1e90ff; color:white; }
+        .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px,1fr)); gap:50px; }
+        .testimonial { background:rgba(255,255,255,0.1); padding:40px; border-radius:25px; text-align:center; }
+        .stars { color:#ffd700; font-size:28px; margin-bottom:15px; }
 
         .whatsapp-float {
-            position:fixed;
-            bottom:30px;
-            right:30px;
-            background:#25d366;
-            color:white;
-            width:70px;
-            height:70px;
-            border-radius:50%;
-            font-size:40px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.3);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-decoration:none;
-            z-index:999;
+            position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:70px; height:70px; border-radius:50%; font-size:40px; box-shadow:0 10px 30px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; text-decoration:none;
         }
 
-        footer {
-            background:#111;
-            color:#aaa;
-            text-align:center;
-            padding:60px;
-            font-size:18px;
-        }
+        footer { background:#111; color:#aaa; text-align:center; padding:60px; font-size:18px; }
 
         @media (max-width:768px) {
             .hero h2 { font-size:52px; }
-            .hero p { font-size:20px; }
+            .hero p { font-size:22px; }
             .about-grid { grid-template-columns:1fr; }
-            .nav { display:none; }
         }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/14752323432?text=Hola! Quiero una cotización gratuita" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/14752323432?text=Hola! Quiero cotización" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -202,8 +148,8 @@
     <section class="hero" id="home">
         <div>
             <h2>Professional Cleaning Services</h2>
-            <p>Homes · Offices · Deep Cleaning · Move In/Out · Cleveland & Surrounding Areas</p>
-            <a href="https://wa.me/14752323432" class="btn-whatsapp">Get Free Quote on WhatsApp</a>
+            <p>Homes · Offices · Deep Cleaning · Move In/Out</p>
+            <a href="https://wa.me/14752323432" class="btn-whatsapp">Get Free Quote</a>
         </div>
     </section>
 
@@ -212,19 +158,19 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="https://i.imgur.com/8vP1kNq.jpg" alt="House Cleaning">
-                    <h3>Regular House Cleaning</h3>
-                    <p>Weekly or bi-weekly cleaning – dusting, vacuuming, bathrooms, kitchen and more</p>
+                    <img src="Imagen%20de%20WhatsApp%202025-12-03%20a%20las%2017.18.45.jpg" alt="Team">
+                    <h3>House & Office Cleaning</h3>
+                    <p>Regular and deep cleaning with attention to every detail</p>
                 </div>
                 <div class="service-card">
-                    <img src="https://i.imgur.com/JmR8lYp.jpg" alt="Deep Cleaning">
+                    <img src="Imagen%20de%20WhatsApp%202025-12-03%20a%20las%2017.18.45%20(1).jpg" alt="Deep Cleaning">
                     <h3>Deep Cleaning</h3>
-                    <p>Inside cabinets, ovens, refrigerators, baseboards, windows – everything spotless</p>
+                    <p>Cabinets, appliances, windows – everything spotless</p>
                 </div>
                 <div class="service-card">
-                    <img src="https://i.imgur.com/3qXvL2m.jpg" alt="Commercial Cleaning">
-                    <h3>Office & Commercial</h3>
-                    <p>Daily, weekly or monthly cleaning for offices, warehouses and commercial spaces</p>
+                    <img src="Imagen%20de%20WhatsApp%202025-12-03%20a%20las%2017.18.45%20(2).jpg" alt="Commercial">
+                    <h3>Commercial Cleaning</h3>
+                    <p>Warehouses, offices, stores – large scale cleaning</p>
                 </div>
             </div>
         </div>
@@ -235,33 +181,33 @@
             <h2>About SOLJCS</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>We are a family-owned cleaning company in Cleveland, OH with more than 8 years of experience.</p>
-                    <p>We use only eco-friendly products, our team is fully insured and bonded, and we guarantee 100% satisfaction on every job.</p>
-                    <p>Whether it's a small apartment or a large office, we treat every space as if it were our own.</p>
+                    <p>Family-owned company with 8+ years of experience in Cleveland.</p>
+                    <p>Fully insured · Eco-friendly products · 100% satisfaction guarantee</p>
+                    <p>We treat every space like our own.</p>
                 </div>
-                <img src="https://i.imgur.com/0wL9p8Z.jpg" alt="SOLJCS Team">
+                <img src="Imagen%20de%20WhatsApp%202025-12-03%20a%20las%2017.18.45.jpg" alt="SOLJCS Team">
             </div>
         </div>
     </section>
 
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>What Our Clients Say</h2>
+            <h2>Client Reviews</h2>
             <div class="testimonials-grid">
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p>"The best cleaning service in Cleveland! They leave my house spotless every time."</p>
-                    <strong>— Maria R., Cleveland</strong>
+                    <p>"The best cleaning service I've ever had!"</p>
+                    <strong>— Maria R.</strong>
                 </div>
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p>"Professional, punctual and very detailed. Highly recommended!"</p>
-                    <strong>— John M., Lakewood</strong>
+                    <p>"Professional and very detailed work."</p>
+                    <strong>— John M.</strong>
                 </div>
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
-                    <p>"They cleaned my office after construction and it looked like new. Incredible job!"</p>
-                    <strong>— Sarah K., Westlake</strong>
+                    <p>"They transformed my office after construction."</p>
+                    <strong>— Sarah K.</strong>
                 </div>
             </div>
         </div>
@@ -269,7 +215,7 @@
 
     <footer id="contact">
         <div class="container">
-            <p style="font-size:28px; margin-bottom:20px;"><strong>SOLJCS Cleaning Services</strong></p>
+            <p style="font-size:32px;"><strong>SOLJCS Cleaning Services</strong></p>
             <p>+1 (475) 232-3432 | 13718 Liberty Ave, Cleveland, OH 44135</p>
             <p style="margin-top:30px;">© 2025 SOLJCS - Your Space Always Clean</p>
         </div>
