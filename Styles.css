@@ -8,11 +8,17 @@ header .container { display:flex; justify-content:space-between; align-items:cen
 .logo span { font-size:15px; color:#666; display:block; margin-top:-6px; }
 .nav a { margin:0 18px; text-decoration:none; color:#333; font-weight:600; font-size:17px; transition:0.3s; }
 .nav a:hover { color:#1e90ff; }
-
 .hero { 
-    background: linear-gradient(rgba(0,0,rgba(0,0,0,0.5)), url('hero.jpg') center/cover no-repeat fixed; 
-    color:white; text-align:center; padding:200px 20px 100px; min-height:90vh; display:flex; align-items:center; justify-content:center; 
+    background: linear-gradient(135deg, #1e90ff 0%, #25d366 100%);
+    color: white;
+    text-align: center;
+    padding: 180px 20px 100px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.
 .hero h2 { font-size:50px; margin-bottom:20px; text-shadow:0 3px 10px rgba(0,0,0,0.7); }
 .hero p { font-size:22px; margin-bottom:35px; text-shadow:0 2px 8px rgba(0,0,0,0.7); }
 .btn-primary { background:#25d366; color:white; padding:18px 40px; border-radius:50px; text-decoration:none; font-weight:700; font-size:19px; box-shadow:0 8px 25px rgba(37,211,102,0.4); transition:0.3s; }
